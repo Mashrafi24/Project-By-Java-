@@ -1,0 +1,25 @@
+
+class Animal {
+    protected String type;
+
+    protected void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+// Child class
+class Dog extends Animal {
+    void display() {
+        type = "Dog";   // Accessing protected variable
+        sound();        // Accessing protected method
+        System.out.println("Type: " + type);
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.display();
+    }
+}
